@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkyObservations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SkyObservations.xsd">
+    <SkyObservation id="a-1">
+        <date>1415292313</date>
+        <coordinate ordType="EQ">
+            <ords>18.324,20.6564</ords>
+        </coordinate>
+        <hops/>
+        <type>STAR</type>
+        <name>vdset</name>
+        <notes>first notes56</notes>
+        <extra/>
+    </SkyObservation>
+    <SkyObservation id="a-2">
+        <date>1412000735</date>
+        <coordinate ordType="EQ">
+            <ords>11.324,150.6564</ords>
+        </coordinate>
+        <hops>
+            <id>a-1</id>
+        </hops>    
+        <type>NEBULA</type>
+        <name>basfer</name>
+        <notes>test notes</notes>
+        <extra>
+            <size>3</size>
+        </extra>
+    </SkyObservation>
+    <SkyObservation id="a-3">
+        <date>1415292373</date>
+        <coordinate ordType="EQ">
+            <ords>7.324,90.6564</ords>
+        </coordinate>
+        <hops>
+            <id>a-3</id>
+            <id>a-3</id>
+        </hops>
+        <type>CLUSTER</type>
+        <name>casdfs</name>
+        <notes>hoola hodf</notes>
+        <extra>
+            <appmag>-2</appmag>
+            <relmag>4</relmag>
+        </extra>
+    </SkyObservation>
+    <SkyObservation id="a-4">
+        <date>1415292452</date>
+        <coordinate ordType="EQ">
+            <ords>20.324,208.6564</ords>
+        </coordinate>
+        <hops>
+            <id>a-4</id>
+            <id>a-4</id>
+        </hops>
+        <type>GALAXY</type>
+        <name>aefsa</name>
+        <notes>nothing</notes>
+        <extra>
+            <appmag>-3</appmag>
+            <relmag>5</relmag>
+        </extra>
+    </SkyObservation>
+    <SkyObservation id="a-5">
+        <date>1415290827</date>
+        <coordinate ordType="EQ">
+            <ords>3.324,300.6564</ords>
+        </coordinate>
+        <hops>
+            <id>a-1</id>
+            <id>a-2</id>
+        </hops>
+        <type>PLANET</type>
+        <name>aasf4w</name>
+        <notes>test entries</notes>
+        <extra>
+            <appmag>-3</appmag>
+            <relmag>5</relmag>
+        </extra>
+    </SkyObservation>
+<SkyObservation id="a-1415293733"><date>1415293733</date><coordinate ordType="EQ"><ords>10,100</ords></coordinate><name>dgsderg</name><notes>i hate the flu</notes><type>STAR</type><hops/><extra/></SkyObservation><SkyObservation id="a-1415295472"><date>1415295913</date><coordinate ordType="EQ"><ords>4.99,40</ords></coordinate><name>apple</name><notes>last addition before submission</notes><type>CLUSTER</type><hops/><extra/></SkyObservation></SkyObservations>

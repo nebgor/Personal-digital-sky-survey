@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <projectname value="PDSS"/>
+    <navbar>
+        <link action="home"/>
+        <dropdown name="actions">
+            <link action="view"/>
+            <!-- quick todo -->
+            <link action="create"/>
+            <!-- done -->
+            <link action="update"/>
+            <!-- not yet implemented -->
+<!--             <link action="delete"/>
+            <link action="search"/> -->
+        </dropdown>
+        <dropdown name="favourite">
+            
+            
+        <link id="a-3"/><link id="a-5"/><link id="a-4"/><link id="a-1"/><link id="a-2"/></dropdown>
+        <dropdown name="exploring">
+            
+        <link id="a-3"/></dropdown>
+    </navbar>
+    <postnav/>
+    <content/>
+    <footer/>
+
+</root>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--
+Copyright (C) 2014 aparup
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+              <!-- definition of simple types -->
+    <xs:simpleType name="objType">
+        <xs:restriction base="xs:NMTOKEN">
+            <!--- need some named elements, star,nebula,cluster,galaxy-->
+            <xs:enumeration value="STAR"/>
+            <xs:enumeration value="NEBULA"/>
+            <xs:enumeration value="CLUSTER"/>
+            <xs:enumeration value="GALAXY"/>
+            <xs:enumeration value="PLANET"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ordType">
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="ALTAZ"/>
+            <xs:enumeration value="EQ"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="SkyObservations">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded" minOccurs="0"> <!-- Journal ALL the observations -->
+                <xs:element name="SkyObservation">
+                    <xs:complexType>
+                        <xs:all minOccurs="1">
+                            <xs:element name="date" type="xs:long"/>
+                            <!-- where - useful to plot on a star chart later. -->
+                            <xs:element name="coordinate">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element type="xs:string" name="ords"/><!--in defined coordinate system,  @todo need to validate this data-->
+                                    </xs:all>
+                                    <xs:attribute type="xs:string" name="ordType"/><!--this is not really used yet.-->
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="notes" type="xs:string"/> <!-- maybe blank-->
+                            <xs:element name="type" type="objType"/>
+                            <xs:element name="hops">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:IDREF" maxOccurs="10" minOccurs="0"/> <!-- hops should be short (keyref) -->
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!--<xs:element name="number" type="xs:integer"/>
+                            will go deeper into cataloging later -->
+                            <xs:element name="extra">
+                                <xs:complexType>
+                                    <xs:choice maxOccurs="4" minOccurs="0">
+                                        <xs:element name="size" type="xs:integer"/>
+                                        <xs:element name="appmag" type="xs:integer"/>
+                                        <xs:element name="relmag" type="xs:integer"/>
+                                        <xs:element name="spectrum" type="xs:string"/>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:all>
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

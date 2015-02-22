@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2014 aparup
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+
+<SkyObservations
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='SkyObservations.xsd'>
+    <SkyObservation id="1">
+        <date>1412000535</date>
+        <coordinate version="galactic">
+            <ordsystem>26854.324,68546541.6564</ordsystem>
+        </coordinate>
+        <hops/>
+        <type>STAR</type>
+        <name>aafaf</name>
+        <notes>let#quot;s try this</notes>
+    </SkyObservation>
+    <SkyObservation id="2">
+        <date>1412000735</date>
+        <coordinate version="galactic">
+            <ordsystem>26854.324,68546541.6564</ordsystem>
+        </coordinate>
+        <hops>
+            <id>1</id>
+        </hops>    
+        <type>STAR</type>
+        <name>basfer</name>
+        <notes>what#quot;s happening?</notes>
+    </SkyObservation>
+    <SkyObservation id="3">
+        <date>1412000835</date>
+        <coordinate version="galactic">
+            <ordsystem>26854.324,68546541.6564</ordsystem>
+        </coordinate>
+        <hops>
+            <id>1</id>
+            <id>2</id>
+        </hops>
+        <type>STAR</type>
+        <name>casdf</name>
+        <notes>i dunno</notes>
+    </SkyObservation>
+</SkyObservations>

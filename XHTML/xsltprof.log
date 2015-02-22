@@ -1,0 +1,70 @@
+number               match                name      mode  Calls Tot 100us Avg
+
+    0                 link                                   10     48      4
+    1               navbar                                    1      4      4
+    2             dropdown                                    3      3      1
+    3      SkyObservations                                    1      2      2
+    4                    /                                    1      2      2
+    5       SkyObservation                                    5      1      0
+    6              content                                    1      1      1
+    7          projectname                                    2      1      0
+    8              postnav                                    1      0      0
+    9               footer                                    1      0      0
+
+                         Total                               26     62
+
+index % time    self  children    called     name
+                0.000    0.001      1/10        navbar [1]
+                0.000    0.000      9/10        dropdown [2]
+[0]    77.42    0.000    0.000     10     link [0]
+-----------------------------------------------
+                0.000    0.000      1/1         / [4]
+[1]     6.45    0.000    0.001      1     navbar [1]
+                0.000    0.000      1/4         link [0]
+                0.000    0.000      3/4         dropdown [2]
+-----------------------------------------------
+                0.000    0.001      3/3         navbar [1]
+[2]     4.84    0.000    0.000      3     dropdown [2]
+                0.000    0.000      9/9         link [0]
+-----------------------------------------------
+                0.000    0.000      1/1         content [6]
+[3]     3.23    0.000    0.000      1     SkyObservations [3]
+                0.000    0.000      5/5         SkyObservation [5]
+-----------------------------------------------
+                0.001    0.000      1/1         - [10]
+[4]     3.23    0.000    0.000      1     / [4]
+                0.000    0.001      1/6         navbar [1]
+                0.000    0.000      1/6         content [6]
+                0.000    0.000      2/6         projectname [7]
+                0.000    0.000      1/6         postnav [8]
+                0.000    0.000      1/6         footer [9]
+-----------------------------------------------
+                0.000    0.000      5/5         SkyObservations [3]
+[5]     1.61    0.000    0.000      5     SkyObservation [5]
+-----------------------------------------------
+                0.000    0.000      1/1         / [4]
+[6]     1.61    0.000    0.000      1     content [6]
+                0.000    0.000      1/1         SkyObservations [3]
+-----------------------------------------------
+                0.000    0.000      2/2         / [4]
+[7]     1.61    0.000    0.000      2     projectname [7]
+-----------------------------------------------
+                0.000    0.000      1/1         / [4]
+[8]     0.00    0.000    0.000      1     postnav [8]
+-----------------------------------------------
+                0.000    0.000      1/1         / [4]
+[9]     0.00    0.000    0.000      1     footer [9]
+-----------------------------------------------
+
+Index by function name
+[0] link (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:38)
+[1] navbar (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:13)
+[2] dropdown (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:56)
+[3] SkyObservations (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:21)
+[4] / (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:10)
+[5] SkyObservation (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:72)
+[6] content (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:44)
+[7] projectname (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:7)
+[8] postnav (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:35)
+[9] footer (file:///C:/xampp/htdocs/PDSS/XHTML/navbar/navbar.xsl:71)
+
